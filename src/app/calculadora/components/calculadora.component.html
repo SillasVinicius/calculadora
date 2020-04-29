@@ -1,0 +1,146 @@
+<div id="background">
+  <!-- Main background -->
+
+  <input
+    type="text"
+    class="form-control text-right"
+    style="
+      font-size: 25px;
+      border: none;
+      color: white;
+      background-color: #3b3535;
+    "
+    id="display"
+    name="display"
+    [value]="display"
+    readonly
+  />
+
+  <div id="main">
+    <div id="first-rows">
+      <button class="del-bg" id="delete" (click)="limpar()">Del</button>
+      <button value="%" class="btn-style operator opera-bg fall-back">%</button>
+      <button
+        value="+"
+        class="btn-style opera-bg value align operator"
+        (click)="definirOperacao('+')"
+      >
+        +
+      </button>
+    </div>
+
+    <div class="rows">
+      <button
+        value="7"
+        (click)="adicionarNumero('7')"
+        class="btn-style num-bg num first-child"
+      >
+        7
+      </button>
+      <button
+        value="8"
+        (click)="adicionarNumero('8')"
+        class="btn-style num-bg num"
+      >
+        8
+      </button>
+      <button
+        value="9"
+        (click)="adicionarNumero('9')"
+        class="btn-style num-bg num"
+      >
+        9
+      </button>
+      <button
+        value="-"
+        (click)="definirOperacao('-')"
+        class="btn-style opera-bg operator"
+      >
+        -
+      </button>
+    </div>
+
+    <div class="rows">
+      <button
+        value="4"
+        class="btn-style num-bg num first-child"
+        (click)="adicionarNumero('4')"
+      >
+        4
+      </button>
+      <button
+        value="5"
+        class="btn-style num-bg num"
+        (click)="adicionarNumero('5')"
+      >
+        5
+      </button>
+      <button
+        value="6"
+        class="btn-style num-bg num"
+        (click)="adicionarNumero('6')"
+      >
+        6
+      </button>
+      <button
+        value="*"
+        class="btn-style opera-bg operator"
+        (click)="definirOperacao('*')"
+      >
+        x
+      </button>
+    </div>
+
+    <div class="rows">
+      <button
+        value="1"
+        class="btn-style num-bg num first-child"
+        (click)="adicionarNumero('1')"
+      >
+        1
+      </button>
+      <button
+        value="2"
+        class="btn-style num-bg num"
+        (click)="adicionarNumero('2')"
+      >
+        2
+      </button>
+      <button
+        value="3"
+        class="btn-style num-bg num"
+        (click)="adicionarNumero('3')"
+      >
+        3
+      </button>
+      <button
+        value="/"
+        class="btn-style opera-bg operator"
+        (click)="definirOperacao('/')"
+      >
+        /
+      </button>
+    </div>
+
+    <div class="rows">
+      <button
+        value="0"
+        class="num-bg zero"
+        id="delete"
+        (click)="adicionarNumero('0')"
+      >
+        0
+      </button>
+      <button
+        value="."
+        class="btn-style num-bg period fall-back"
+        (click)="adicionarNumero('.')"
+      >
+        .
+      </button>
+      <button value="=" id="eqn-bg" class="eqn align" (click)="calcular()">
+        =
+      </button>
+    </div>
+  </div>
+</div>
